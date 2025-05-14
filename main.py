@@ -36,10 +36,10 @@ async def get_produtos():
     response = templates.TemplateResponse("produtos.html", {"request": {}, "produtos": produtos})
     return response
 
-@app.get("/categoria")
+@app.get("/categorias")
 async def get_categorias():
-    categoria = categoria_repo.obter_todos()
-    response = templates.TemplateResponse("categorias.html", {"request": {}, "categoria": categoria})
+    categorias = categoria_repo.obter_todos()
+    response = templates.TemplateResponse("categorias.html", {"request": {}, "categorias": categorias})
     return response
 
 if __name__ == "__main__":
